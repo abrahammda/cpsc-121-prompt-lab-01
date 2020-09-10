@@ -1,6 +1,6 @@
 # Your Name
-# CPSC 120-05
-# Midterm
+# CPSC 121-99
+# Lab ??
 # 2020-03-19
 # Your.Email@Address.Please
 #
@@ -63,5 +63,8 @@ format:
 	done
 
 tidy:
-	-$(TIDY) bmr.cpp $(TIDYFLAGS)
+	for i in $(CXXFILES); do \
+		echo "Checking $$i"; \
+		-$(TIDY) $$i $(TIDYFLAGS); \
+	done
 
